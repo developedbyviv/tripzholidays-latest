@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 const packages = [
@@ -40,16 +42,31 @@ const packages = [
 ];
 
 export default function NorwayPackages() {
+  const handleViewAll = () => {
+    alert('View all Norway packages!');
+  };
+
+  const handleViewItinerary = (id: number) => {
+    alert(`View itinerary for Norway package ${id}`);
+  };
+
+  const handleCall = (id: number) => {
+    alert(`Call us for Norway package ${id}\nPhone: +91-9876543210`);
+  };
+
   return (
     <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900">Norway</h2>
-          <div className="flex items-center space-x-2 text-black font-medium">
+          <button 
+            className="flex items-center space-x-2 text-black font-medium hover:text-orange-500 transition-colors duration-300 cursor-pointer transform hover:scale-105 active:scale-95"
+            onClick={handleViewAll}
+          >
             <span>View all</span>
             <img src="/resources/icons/view all arrow.svg" alt="Arrow" className="w-5 h-5" />
-          </div>
+          </button>
         </div>
 
         {/* Cards Grid */}
@@ -117,11 +134,19 @@ export default function NorwayPackages() {
 
                 {/* Action Buttons */}
                 <div className="flex items-center space-x-1">
-                  <button className="flex-1 bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium hover:bg-orange-600 transition-colors duration-300">
+                  <button 
+                    className="flex-1 bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                    onClick={() => handleViewItinerary(pkg.id)}
+                    style={{ backgroundColor: '#FF741F' }}
+                  >
                     View itinerary
                   </button>
                   <div className="w-px h-4 bg-gray-300"></div>
-                  <button className="w-7 h-7 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors duration-300">
+                  <button 
+                    className="w-7 h-7 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-md hover:shadow-lg"
+                    onClick={() => handleCall(pkg.id)}
+                    style={{ backgroundColor: '#FF741F' }}
+                  >
                     <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>

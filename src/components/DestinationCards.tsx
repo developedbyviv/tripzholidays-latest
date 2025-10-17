@@ -56,6 +56,10 @@ export default function DestinationCards() {
     setCurrentIndex((prev) => Math.min(destinations.length - 4, prev + 1));
   };
 
+  const handlePlanTrip = (destination: any) => {
+    alert(`Plan your trip to ${destination.name}!\nStarting from ₹${destination.price}`);
+  };
+
   return (
     <div className="bg-white py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -65,7 +69,7 @@ export default function DestinationCards() {
           {currentIndex > 0 && (
             <button
               onClick={scrollLeft}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
             >
               <svg className="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -112,7 +116,10 @@ export default function DestinationCards() {
                       </div>
                       
                       {/* Plan a Trip Button */}
-                      <button className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-3 flex items-center justify-center space-x-2 hover:bg-white/30 transition-colors duration-300">
+                      <button 
+                        className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-3 flex items-center justify-center space-x-2 hover:bg-white/30 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                        onClick={() => handlePlanTrip(destination)}
+                      >
                         <span className="text-white font-medium">Plan a trip</span>
                         <img src="/resources/icons/ICON.svg" alt="Arrow" className="w-6 h-6" />
                       </button>
@@ -127,7 +134,7 @@ export default function DestinationCards() {
           {currentIndex < destinations.length - 4 && (
             <button
               onClick={scrollRight}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
             >
               <svg className="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -34,9 +34,6 @@ export default function ValuePropositionsSection() {
             </p>
           </motion.div>
 
-          {/* Vertical Separator */}
-          <div className="hidden md:block absolute left-1/3 top-0 bottom-0 w-0.5 bg-black"></div>
-          <div className="hidden md:block absolute right-1/3 top-0 bottom-0 w-0.5 bg-black"></div>
 
           {/* Affordable Adventures */}
           <motion.div

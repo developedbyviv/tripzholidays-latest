@@ -24,3 +24,74 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Remove any potential vertical lines */
+* {
+  border-left: none !important;
+  border-right: none !important;
+  outline: none !important;
+}
+
+/* Ensure no vertical lines in hero section */
+.hero-section * {
+  border-left: none !important;
+  border-right: none !important;
+  outline: none !important;
+}
+
+/* Remove any potential grid lines or visual guides */
+.hero-section {
+  border: none !important;
+  outline: none !important;
+}
+
+.hero-section > * {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Remove any potential flexbox or grid visual guides */
+.hero-section .flex,
+.hero-section .grid {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Remove any potential pseudo-elements that might create lines */
+.hero-section *::before,
+.hero-section *::after {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Remove any potential box-shadow that might look like lines */
+.hero-section * {
+  box-shadow: none !important;
+}
+
+/* Ensure no visual guides or overlays */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before,
+.hero-section::after {
+  display: none !important;
+}
+
+/* Remove any potential visual guides from browser dev tools */
+.hero-section {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Ensure no visual artifacts */
+.hero-section * {
+  -webkit-tap-highlight-color: transparent;
+}
