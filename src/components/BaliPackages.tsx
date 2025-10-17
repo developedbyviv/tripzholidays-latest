@@ -69,7 +69,7 @@ export default function BaliPackages() {
                 <div className="flex items-center space-x-2 mb-1">
                   <div className="flex items-center space-x-1">
                     <span className="text-gray-700 text-xs font-medium">{pkg.duration}</span>
-                    <img src="/resources/icons/day.svg" alt="Day" className="w-3 h-3" />
+                    <img src="/resources/icons/days.svg" alt="Day" className="w-3 h-3" />
                   </div>
                   <div className="w-px h-3 bg-gray-300"></div>
                   <div className="flex items-center space-x-1">

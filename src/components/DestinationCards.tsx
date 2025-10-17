@@ -59,7 +59,6 @@ export default function DestinationCards() {
   return (
     <div className="bg-white py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-
         {/* Cards Container */}
         <div className="relative">
           {/* Scroll Left Button */}
@@ -78,11 +77,14 @@ export default function DestinationCards() {
           <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-300 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / 4)}%)` }}
+              style={{ 
+                transform: `translateX(-${currentIndex * 12.5}%)`,
+                width: '200%'
+              }}
             >
               {destinations.map((destination, index) => (
-                <div key={index} className="w-1/4 flex-shrink-0 px-3">
-                  <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div key={index} style={{ width: '12.5%', flexShrink: 0 }}>
+                  <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mx-1">
                     {/* Background Image */}
                     <div 
                       className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -133,7 +135,6 @@ export default function DestinationCards() {
             </button>
           )}
         </div>
-
       </div>
     </div>
   );

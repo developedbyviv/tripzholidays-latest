@@ -7,9 +7,9 @@ const packages = [
     discount: '10% Off',
     duration: 7,
     nights: 6,
-    title: 'Winter Special Golden Trio | Switzerland, France & Italy with Gala Dinner',
-    originalPrice: 'INR 3,05,900',
-    discountedPrice: 'INR 2,30,000',
+    title: 'European Grand Tour | Paris, Rome & Barcelona',
+    originalPrice: 'INR 2,85,900',
+    discountedPrice: 'INR 2,15,000',
     rating: '4.5',
     reviews: '(40)',
   },
@@ -19,9 +19,9 @@ const packages = [
     discount: '10% Off',
     duration: 7,
     nights: 6,
-    title: 'Winter Special Golden Trio | Switzerland, France & Italy with Gala Dinner',
-    originalPrice: 'INR 3,05,900',
-    discountedPrice: 'INR 2,30,000',
+    title: 'European Grand Tour | Paris, Rome & Barcelona',
+    originalPrice: 'INR 2,85,900',
+    discountedPrice: 'INR 2,15,000',
     rating: '4.5',
     reviews: '(40)',
   },
@@ -31,9 +31,9 @@ const packages = [
     discount: '10% Off',
     duration: 7,
     nights: 6,
-    title: 'Winter Special Golden Trio | Switzerland, France & Italy with Gala Dinner',
-    originalPrice: 'INR 3,05,900',
-    discountedPrice: 'INR 2,30,000',
+    title: 'European Grand Tour | Paris, Rome & Barcelona',
+    originalPrice: 'INR 2,85,900',
+    discountedPrice: 'INR 2,15,000',
     rating: '4.5',
     reviews: '(40)',
   },
@@ -75,7 +75,7 @@ export default function EuropePackages() {
                 <div className="flex items-center space-x-2 mb-1">
                   <div className="flex items-center space-x-1">
                     <span className="text-gray-700 text-xs font-medium">{pkg.duration}</span>
-                    <img src="/resources/icons/day.svg" alt="Day" className="w-3 h-3" />
+                    <img src="/resources/icons/days.svg" alt="Day" className="w-3 h-3" />
                   </div>
                   <div className="w-px h-3 bg-gray-300"></div>
                   <div className="flex items-center space-x-1">
@@ -92,7 +92,7 @@ export default function EuropePackages() {
                 {/* Tags */}
                 <div className="mb-1.5">
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-2 py-0.5 rounded text-xs font-medium">
-                    3D Lorem Ipsum design 4D Lorem Ipsum design
+                    European Grand Tour
                   </span>
                 </div>
 

@@ -3,69 +3,75 @@ import React from 'react';
 const packages = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop',
-    discount: '25% Off',
-    duration: 4,
-    nights: 3,
-    title: 'Bangkok & Phuket Beach Paradise | Thailand Adventure',
-    originalPrice: 'INR 1,25,900',
-    discountedPrice: 'INR 94,000',
-    rating: '4.6',
-    reviews: '(52)',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop', // Placeholder
+    discount: '20% Off',
+    duration: 7,
+    nights: 6,
+    title: 'New Zealand Adventure Explorer',
+    originalPrice: 'INR 1,56,250',
+    discountedPrice: 'INR 1,25,000',
+    rating: '4.8',
+    reviews: '(124)',
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop',
-    discount: '22% Off',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop', // Placeholder
+    discount: '15% Off',
     duration: 6,
     nights: 5,
-    title: 'Complete Thailand Experience | Bangkok, Chiang Mai & Islands',
-    originalPrice: 'INR 1,65,900',
-    discountedPrice: 'INR 1,29,000',
-    rating: '4.7',
-    reviews: '(48)',
+    title: 'South Island Scenic Journey',
+    originalPrice: 'INR 1,15,000',
+    discountedPrice: 'INR 98,000',
+    rating: '4.9',
+    reviews: '(89)',
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop',
-    discount: '28% Off',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop', // Placeholder
+    discount: '25% Off',
     duration: 8,
     nights: 7,
-    title: 'Thailand Grand Tour | Bangkok, Chiang Mai, Phuket & Koh Samui',
-    originalPrice: 'INR 2,15,900',
-    discountedPrice: 'INR 1,55,000',
-    rating: '4.8',
-    reviews: '(41)',
+    title: 'North Island Cultural Discovery',
+    originalPrice: 'INR 1,93,000',
+    discountedPrice: 'INR 1,45,000',
+    rating: '4.7',
+    reviews: '(156)',
   },
 ];
 
-export default function ThailandPackages() {
+export default function NewZealandPackages() {
   return (
     <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
+        {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900">Thailand</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900">New Zealand</h2>
           <div className="flex items-center space-x-2 text-black font-medium">
             <span>View all</span>
             <img src="/resources/icons/view all arrow.svg" alt="Arrow" className="w-5 h-5" />
           </div>
         </div>
 
+        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -gap-1">
           {packages.map((pkg) => (
             <div key={pkg.id} className="bg-white rounded-lg max-w-xs mx-auto">
+              {/* Image Section */}
               <div className="relative mb-3">
                 <img
                   src={pkg.image}
                   alt={pkg.title}
                   className="w-full h-56 object-cover rounded-lg"
                 />
+                {/* Discount Badge */}
                 <div className="absolute top-1 right-1 bg-orange-500 text-white px-1.5 py-0.5 rounded text-xs font-medium">
                   {pkg.discount}
                 </div>
               </div>
 
+              {/* Content */}
               <div className="p-2.5">
+                {/* Duration */}
                 <div className="flex items-center space-x-2 mb-1">
                   <div className="flex items-center space-x-1">
                     <span className="text-gray-700 text-xs font-medium">{pkg.duration}</span>
@@ -78,16 +84,19 @@ export default function ThailandPackages() {
                   </div>
                 </div>
 
+                {/* Title */}
                 <h3 className="text-xs font-bold text-gray-900 mb-1 line-clamp-2">
                   {pkg.title}
                 </h3>
 
+                {/* Tags */}
                 <div className="mb-1.5">
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-2 py-0.5 rounded text-xs font-medium">
-                    Beach Paradise Temples Street Food Islands
+                    Adventure Explorer
                   </span>
                 </div>
 
+                {/* Pricing */}
                 <div className="flex items-center justify-between mb-1.5">
                   <div>
                     <div className="text-gray-500 line-through text-xs">
@@ -106,6 +115,7 @@ export default function ThailandPackages() {
                   </div>
                 </div>
 
+                {/* Action Buttons */}
                 <div className="flex items-center space-x-1">
                   <button className="flex-1 bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium hover:bg-orange-600 transition-colors duration-300">
                     View itinerary

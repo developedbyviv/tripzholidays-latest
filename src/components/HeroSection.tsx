@@ -133,7 +133,7 @@ export default function HeroSection() {
               </div>
               
               {/* Book Now Button */}
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium transition-colors text-sm sm:text-base">
+              <button className="text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium transition-colors text-sm sm:text-base hover:opacity-90" style={{ backgroundColor: '#FF741F' }}>
                 BOOK NOW
               </button>
             </div>
@@ -143,8 +143,7 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div className="relative z-10 flex items-center justify-center h-full pt-16">
-        <div className="text-center text-white max-w-4xl mx-auto px-4">
-          <AnimatePresence mode="wait">
+        <div className="text-center text-white max-w-4xl mx-auto px-4">          <AnimatePresence mode="wait">
             <motion.div
               key={currentCountryIndex}
               initial={{ opacity: 0, y: 20 }}
@@ -191,7 +190,8 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <motion.button 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full text-base font-semibold shadow-lg"
+              className="text-white px-6 py-3 rounded-full text-base font-semibold shadow-lg hover:opacity-90"
+              style={{ backgroundColor: '#FF741F' }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
@@ -210,9 +210,10 @@ export default function HeroSection() {
               key={index}
               className={`w-1 h-1 rounded-full transition-all duration-300 ${
                 index === currentCountryIndex
-                  ? 'bg-orange-500'
-                  : 'bg-white bg-opacity-50'
+                  ? 'opacity-100'
+                  : 'opacity-50'
               }`}
+              style={{ backgroundColor: index === currentCountryIndex ? '#FF741F' : 'white' }}
             />
           ))}
         </div>
